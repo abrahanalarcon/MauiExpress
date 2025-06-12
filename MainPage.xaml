@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"  
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
+            x:Class="MauiExpress.MainPage"
+            Title="Opinión de Película">
+    <StackLayout Padding="20" Spacing="15">
+        
+        <Editor x:Name="comentarioEditor" 
+               Placeholder="Escribe tu opinión de la película!"
+               AutoSize="TextChanges"
+               MinimumHeightRequest="100"
+               TextChanged="OnEditorTextChanged"/>
+
+        <Label x:Name="contadorCaracteres"
+              Text="Caracteres: 0"
+              FontSize="14"
+              TextColor="Gray"/>
+
+        <Button Text="Enviar Comentario" 
+               Clicked="OnEnviarComentarioClicked" />
+
+        <Label x:Name="comentarioMostrado"
+              Text="Tu comentario aparecerá aquí!"
+              FontSize="16"/>
+
+        <Button Text="Limpiar Comentario" 
+               Clicked="OnLimpiarComentarioClicked"
+               BackgroundColor="LightGray"/>
+
+        <Label x:Name="contadorFinal"
+              Text="Longitud final: 0 caracteres"
+              FontSize="14"
+              TextColor="Blue"/>
+    </StackLayout>
+</ContentPage>
